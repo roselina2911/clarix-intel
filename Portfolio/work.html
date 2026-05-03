@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work — Clarix.intel</title>
+    <meta name="description" content="Case studies from Clarix.intel — Healthcare AI service recovery, WhatsApp patient query bot, B2B SaaS data integration pipeline." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="work">
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand" aria-label="Clarix.intel — home">
+                <img class="nav-brand-mark" src="clarix-icon.png" alt="" />
+                <img src="clarix-wordmark.png" alt="Clarix.intel" class="nav-brand-img" />
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-page="home">Home</a></li>
+                <li><a href="services.html" data-page="services">Services</a></li>
+                <li><a href="work.html" data-page="work">Work</a></li>
+                <li><a href="about.html" data-page="about">About</a></li>
+                <li><a href="contact.html" data-page="contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-rust">Book a Call <span class="arrow">→</span></a>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="services.html" data-page="services">Services</a>
+        <a href="work.html" data-page="work">Work</a>
+        <a href="about.html" data-page="about">About</a>
+        <a href="contact.html" data-page="contact">Contact</a>
+        <a href="contact.html" class="btn btn-rust">Book a Call →</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="hero-grid-bg"></div>
+        <div class="container page-header-inner">
+            <span class="eyebrow eyebrow-rust mb-md reveal" style="display:block; margin-bottom:1.5rem;">§ SELECTED WORK — 2026</span>
+            <h1 class="display-xl reveal reveal-delay-1">Problems we've solved. <em>Results</em> that speak plainly.</h1>
+            <p class="hero-sub reveal reveal-delay-2">Client names are kept confidential by request. The problems, approaches, and outcomes are real.</p>
+        </div>
+    </header>
+
+    <!-- CASE 1 -->
+    <section class="case-study">
+        <div class="container">
+            <div class="case-inner">
+                <div class="case-meta reveal">
+                    <div class="case-num">01</div>
+                    <span class="case-industry">Healthcare Enterprise</span>
+                    <h2 class="display-md">Healthcare AI Service Recovery Agent</h2>
+                    <div class="case-tags">
+                        <span class="case-tag">AI Agent</span>
+                        <span class="case-tag">Full-Stack Web App</span>
+                        <span class="case-tag">Data Pipeline</span>
+                    </div>
+                    <div class="case-stack">
+                        <strong>Stack</strong>
+                        React · TypeScript · Node.js · SQLite · Anthropic Claude API · REST APIs
+                    </div>
+                </div>
+                <div class="case-body reveal reveal-delay-1">
+                    <h3>The problem</h3>
+                    <p>A large healthcare company needed a way to automatically analyse AI-generated clinical outcomes and generate recovery action plans for cases where the expected outcome wasn't met. The process was entirely manual — taking senior staff hours every week.</p>
+
+                    <h3>What we built</h3>
+                    <p>A full-stack AI service recovery agent: a React + TypeScript + Node.js web application with an integrated Anthropic Claude AI backend. The system ingested structured outcome data, analysed deviations against benchmarks, generated recovery action plans, and surfaced them in a real-time dashboard for clinical operations teams.</p>
+
+                    <h3>The outcome</h3>
+                    <ul class="case-outcomes">
+                        <li>Recovery analysis time reduced from hours to under 2 minutes per case</li>
+                        <li>Full audit trail for every AI-generated recommendation</li>
+                        <li>Zero manual data entry in the core workflow</li>
+                        <li>Deployed with mock source system integration, ready for production API connection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE 2 -->
+    <section class="case-study">
+        <div class="container">
+            <div class="case-inner">
+                <div class="case-meta reveal">
+                    <div class="case-num">02</div>
+                    <span class="case-industry">Diagnostic Healthcare</span>
+                    <h2 class="display-md">WhatsApp Patient Query Bot</h2>
+                    <div class="case-tags">
+                        <span class="case-tag">Intelligent Chatbot</span>
+                        <span class="case-tag">WhatsApp Integration</span>
+                    </div>
+                    <div class="case-stack">
+                        <strong>Stack</strong>
+                        WhatsApp Business API · Python · LangChain · ChromaDB · FastAPI · Twilio
+                    </div>
+                </div>
+                <div class="case-body reveal reveal-delay-1">
+                    <h3>The problem</h3>
+                    <p>A diagnostic centre chain was receiving 400+ WhatsApp messages daily — appointment bookings, report status queries, test pricing questions. Staff were spending 3–4 hours daily on responses that were nearly identical.</p>
+
+                    <h3>What we built</h3>
+                    <p>A WhatsApp Business API chatbot powered by an LLM backend with a RAG knowledge base containing the centre's service catalogue, pricing, and appointment logic. The bot handled booking, confirmation, reminders, and report dispatch automatically. Complex queries triggered a clean handoff to a human agent with full context pre-loaded.</p>
+
+                    <h3>The outcome</h3>
+                    <ul class="case-outcomes">
+                        <li>78% of daily queries resolved without human involvement</li>
+                        <li>Staff time on WhatsApp reduced from 3.5 hrs/day to under 45 minutes</li>
+                        <li>Appointment no-shows reduced by 34% through automated reminders</li>
+                        <li>Deployed within 3 weeks of project start</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE 3 -->
+    <section class="case-study">
+        <div class="container">
+            <div class="case-inner">
+                <div class="case-meta reveal">
+                    <div class="case-num">03</div>
+                    <span class="case-industry">Fintech SaaS</span>
+                    <h2 class="display-md">B2B SaaS Data Integration Pipeline</h2>
+                    <div class="case-tags">
+                        <span class="case-tag">Data Pipeline</span>
+                        <span class="case-tag">Enterprise Integration</span>
+                        <span class="case-tag">Dashboard</span>
+                    </div>
+                    <div class="case-stack">
+                        <strong>Stack</strong>
+                        Python · Airflow · PostgreSQL · React · Node.js · Salesforce API · Stripe API
+                    </div>
+                </div>
+                <div class="case-body reveal reveal-delay-1">
+                    <h3>The problem</h3>
+                    <p>A B2B SaaS company's enterprise clients were using 5 different data sources (Salesforce, internal PostgreSQL, Google Sheets, an ERP, and a payments API). There was no unified view. The ops team spent two days every week manually compiling a single consolidated report.</p>
+
+                    <h3>What we built</h3>
+                    <p>An automated data ingestion and transformation pipeline that pulled from all 5 sources on a scheduled cadence, normalised the data into a clean PostgreSQL warehouse, and surfaced it in a custom React dashboard with role-based access for different stakeholder views. Included automated email reports generated every Monday morning.</p>
+
+                    <h3>The outcome</h3>
+                    <ul class="case-outcomes">
+                        <li>2-day manual process eliminated entirely</li>
+                        <li>Real-time unified data view available 24/7</li>
+                        <li>6 stakeholder report formats automated</li>
+                        <li>Pipeline runs every 4 hours with failure alerting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="big-cta">
+        <div class="hero-grid-bg" style="opacity:0.35"></div>
+        <div class="container" style="position:relative; z-index:2">
+            <div class="reveal">
+                <span class="eyebrow eyebrow-rust mb-md" style="display:block; margin-bottom:1.5rem;">§ YOUR PROBLEM NEXT</span>
+                <h2 class="display-xl">Have a problem that <em>looks like one of these?</em></h2>
+                <p>Let's talk. 30 minutes, no pitch, honest read on fit.</p>
+                <a href="contact.html" class="btn btn-rust">Book a discovery call <span class="arrow">→</span></a>
+                <div class="small-note">CLARIX.INTEL@GMAIL.COM · BENGALURU, IN</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="display-sm">Clarix<span class="text-rust">.</span>intel</div>
+                    <p>Clarity through intelligent engineering. A seasoned AI engineering firm built for businesses ready to operate at the next level.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#agents">AI Agents</a></li>
+                        <li><a href="services.html#chatbots">Chatbots</a></li>
+                        <li><a href="services.html#webapps">Web Apps</a></li>
+                        <li><a href="services.html#data">Data &amp; ML</a></li>
+                        <li><a href="services.html#integrations">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:clarix.intel@gmail.com">clarix.intel@gmail.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/clarix-intel-0b2a25404" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://instagram.com/clarix.intel" target="_blank" rel="noopener">Instagram</a></li>
+                        <li>Bengaluru, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Clarix.intel · Bengaluru, India · Built with precision.</span>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/clarix-intel-0b2a25404" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/clarix.intel" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                    </a>
+                    <a href="mailto:clarix.intel@gmail.com" aria-label="Email">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
