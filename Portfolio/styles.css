@@ -1063,7 +1063,8 @@ em, .accent-italic {
 }
 
 @media (max-width: 960px) {
-    .service-block-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .service-block-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .service-block-label { position: static !important; top: auto !important; }
 }
 
 .service-block-label {
@@ -1643,7 +1644,8 @@ em, .accent-italic {
 }
 
 @media (max-width: 900px) {
-    .case-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .case-inner { grid-template-columns: 1fr; gap: 1.75rem; }
+    .case-meta { position: static !important; top: auto !important; }
 }
 
 .case-meta {
@@ -2004,3 +2006,271 @@ em, .accent-italic {
 .divider-dark { background: rgba(245, 242, 236, 0.12); }
 
 ::selection { background: var(--rust); color: var(--cream); }
+
+/* ============================================
+   COMPREHENSIVE RESPONSIVE POLISH
+   Mobile-first overrides — applied at end so they win the cascade.
+   Tested for: phones, phablets, tablets, small laptops.
+   ============================================ */
+
+/* Prevent any descendant from causing horizontal scroll */
+img, svg, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.skill-tags span,
+.case-tag {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Tablet / small laptop ≤ 1024px ---------- */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: auto;
+        padding: 7.5rem 0 4rem;
+    }
+    .hero-decor { opacity: 0.5; width: 70%; }
+    .hero-mark { right: -10%; width: clamp(220px, 36vw, 380px); height: clamp(220px, 36vw, 380px); }
+    .hero h1 { max-width: 100%; }
+    .hero-sub { max-width: 60ch; }
+    .section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+    .section-head { margin-bottom: 3rem; }
+}
+
+/* ---------- Tablet portrait ≤ 768px ---------- */
+@media (max-width: 768px) {
+    :root { --gutter: 1.25rem; }
+
+    /* Hero — push decor under content on small screens */
+    .hero {
+        padding: 6.5rem 0 3rem;
+        min-height: auto;
+    }
+    .hero-decor {
+        position: relative;
+        width: 100%;
+        height: 220px;
+        opacity: 0.3;
+        margin-top: 2rem;
+        order: 99;
+    }
+    .hero-inner { display: flex; flex-direction: column; }
+    .hero-mark {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+    }
+    @keyframes float-mobile {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(3deg); }
+    }
+    .hero-mark { animation: float-mobile 16s ease-in-out infinite; }
+    .hero-meta { gap: 1rem; margin-bottom: 2rem; }
+    .hero h1 { margin-bottom: 1.5rem; }
+    .hero-sub { font-size: 1rem; margin-bottom: 2rem; }
+    .hero-ctas { gap: 0.75rem; }
+    .hero-ctas .btn { flex: 1; justify-content: center; min-width: 0; }
+    .hero-bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+    }
+    .hero-stat .num { font-size: 1.75rem; }
+    .hero-stat .lbl { font-size: 0.82rem; }
+
+    /* Display typography — gentler scaling on small screens */
+    .display-xl { font-size: clamp(2.25rem, 9vw, 3.5rem); }
+    .display-lg { font-size: clamp(2rem, 8vw, 3rem); }
+    .display-md { font-size: clamp(1.6rem, 6.5vw, 2.25rem); }
+
+    /* Section headers stack neatly */
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .section-head-text { max-width: 100%; }
+    .section-head .text-link { margin-top: 0.5rem; }
+
+    /* Page headers */
+    .page-header { padding: 7rem 0 3rem; }
+
+    /* Service tiles — 2 column even on phablet */
+    .service-tiles { grid-template-columns: repeat(2, 1fr); }
+    .service-tile { padding: 1.75rem 1.25rem; min-height: 220px; }
+
+    /* Differentiator cards — tighter padding */
+    .diff-card { padding: 1.75rem; }
+    .diff-card-num { font-size: 2.5rem; margin-bottom: 1rem; }
+    .diff-card h3 { font-size: 1.35rem; }
+
+    /* Process timeline — left-bordered vertical on mobile */
+    .process { gap: 1.5rem; }
+    .process-step { padding: 0.5rem 0 0.5rem 1.5rem; }
+    .process-step h3 { font-size: 1.25rem; }
+
+    /* Testimonial */
+    .testimonial { padding: 4rem 0; }
+    .testimonial-inner { padding-left: 1.5rem; }
+    .testimonial blockquote { font-size: clamp(1.25rem, 5vw, 1.75rem); }
+
+    /* Big CTA */
+    .big-cta { padding: 4rem 0; }
+    .big-cta p { font-size: 1rem; }
+
+    /* Service blocks — full single column with breathing room */
+    .service-block { padding: 3.5rem 0; }
+    .service-block-label { margin-bottom: 0; }
+    .service-block-label h2 { margin-bottom: 1.25rem; }
+    .service-block-body h3 { margin: 1.5rem 0 0.75rem; font-size: 0.72rem; }
+    .service-block-body p { font-size: 1rem; }
+    .service-block-body ul { gap: 0.5rem; }
+    .service-block-body li { font-size: 0.95rem; padding-left: 1.25rem; }
+
+    /* Case studies — clean single column */
+    .case-study { padding: 3.5rem 0; }
+    .case-num { font-size: 3.5rem; margin-bottom: 1rem; }
+    .case-meta h2 { margin-bottom: 1.25rem; }
+    .case-tags { gap: 0.4rem; }
+    .case-tag { font-size: 0.66rem; padding: 0.35rem 0.7rem; }
+    .case-stack { padding: 1rem 1.25rem; font-size: 0.8rem; margin-top: 1.25rem; }
+    .case-body h3 { font-size: 0.72rem; margin: 1.5rem 0 0.75rem; }
+    .case-body p { font-size: 1rem; }
+    .case-outcomes li { font-size: 0.95rem; padding: 0.85rem 0; }
+
+    /* About */
+    .about-lede { font-size: 1.5rem; }
+    .about-body p { font-size: 1rem; }
+
+    /* Founder card */
+    .founder-card { padding: 2rem 1.5rem; gap: 1.5rem; }
+    .founder-avatar { width: 110px; height: 110px; font-size: 2.5rem; }
+    .founder-info h3 { font-size: 1.75rem; }
+    .founder-section { margin-top: 1.75rem; padding-top: 1.5rem; }
+    .founder-expand > summary {
+        font-size: 0.7rem;
+        padding: 0.7rem 1.25rem;
+        white-space: normal;
+        line-height: 1.3;
+        text-align: left;
+        display: flex;
+    }
+
+    /* Team grid is already 1-col below 720px — adjust card padding */
+    .member-card { padding: 1.75rem 1.5rem; gap: 1.25rem; }
+    .member-avatar { width: 80px; height: 80px; font-size: 1.75rem; }
+    .member-info h3 { font-size: 1.35rem; }
+
+    /* Skill tags — slightly smaller on phone */
+    .skill-tags span { font-size: 0.7rem; padding: 0.35rem 0.65rem; }
+    .skill-group { margin-bottom: 1.25rem; }
+
+    /* Founder list rows already stack at 560px — improve on tablet */
+    .founder-list li { font-size: 0.9rem; padding: 0.75rem 0; }
+    .founder-list .item-meta { font-size: 0.72rem; }
+
+    /* Values */
+    .value-card { padding: 1.75rem 0; }
+    .value-card h3 { font-size: 1.5rem; }
+
+    /* Contact */
+    .contact-form { padding: 2rem 1.5rem; }
+    .contact-aside h3 { font-size: 1.5rem; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* prevents iOS auto-zoom on focus */
+        padding: 0.85rem 0.9rem;
+    }
+    .form-submit { padding: 1rem; font-size: 0.95rem; }
+
+    /* Footer */
+    .footer { padding: 3rem 0 1.5rem; }
+    .footer-main { gap: 2rem; padding-bottom: 2rem; }
+    .footer-brand p { max-width: 100%; }
+    .footer-bottom { font-size: 0.78rem; }
+}
+
+/* ---------- Phone ≤ 480px ---------- */
+@media (max-width: 480px) {
+    :root { --gutter: 1rem; }
+
+    /* Hero — tightest */
+    .hero { padding: 6rem 0 2.5rem; }
+    .hero-bottom { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .hero-stat .num { font-size: 1.5rem; }
+    .hero-ctas { flex-direction: column; align-items: stretch; }
+    .hero-ctas .btn { width: 100%; }
+
+    /* Display typography */
+    .display-xl { font-size: clamp(2rem, 10vw, 2.75rem); }
+    .display-lg { font-size: clamp(1.75rem, 9vw, 2.5rem); }
+    .display-md { font-size: clamp(1.4rem, 7vw, 1.85rem); }
+
+    /* Service tiles — 1 col already, tighten height */
+    .service-tile { min-height: auto; padding: 1.5rem 1.25rem; }
+    .service-tile-head { margin-bottom: 1.5rem; }
+
+    /* Page header */
+    .page-header { padding: 6rem 0 2.5rem; }
+    .page-header h1 { margin-bottom: 1rem; }
+
+    /* Case study tighter on phone */
+    .case-num { font-size: 2.75rem; }
+    .case-meta h2 { max-width: 100%; }
+
+    /* Buttons */
+    .btn { padding: 0.85rem 1.4rem; font-size: 0.9rem; }
+    .nav-cta .btn { padding: 0.75rem 1.25rem; }
+
+    /* Mobile menu — larger touch targets */
+    .mobile-menu a { font-size: 2rem; padding: 0.85rem 0; }
+
+    /* Marquee — slow on small screens for readability */
+    .marquee-item { font-size: 0.7rem; gap: 1.75rem; }
+    .marquee-item::after { margin-left: 1.75rem; }
+    .marquee-track { animation-duration: 50s; }
+
+    /* Testimonial */
+    .testimonial-inner { padding-left: 1.25rem; }
+
+    /* Founder card */
+    .founder-avatar { width: 90px; height: 90px; font-size: 2rem; }
+
+    /* Marquee gap fix */
+    .marquee { padding: 1.25rem 0; }
+
+    /* Hero stat single column on tiny screens */
+    .hero-stat { max-width: 100%; }
+}
+
+/* ---------- Tiny phones ≤ 360px ---------- */
+@media (max-width: 360px) {
+    .hero-bottom { grid-template-columns: 1fr; }
+    .display-xl { font-size: 1.85rem; }
+    .display-lg { font-size: 1.65rem; }
+    .display-md { font-size: 1.35rem; }
+    .nav-brand-img { height: 26px; }
+    .nav-brand-mark { width: 28px; height: 28px; }
+    .nav-cta .btn { font-size: 0.78rem; padding: 0.6rem 1rem; }
+}
+
+/* ---------- Landscape phone ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero { min-height: auto; padding: 6rem 0 3rem; }
+    .mobile-menu { padding: 4rem 1.5rem 1.5rem; overflow-y: auto; }
+    .mobile-menu a { font-size: 1.5rem; padding: 0.6rem 0; }
+}
+
+/* ---------- Ensure no horizontal overflow ever ---------- */
+body, html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
